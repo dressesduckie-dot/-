@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #432418;
+  --color-primary-container: #5d3a2c;
+  --color-secondary: #924b22;
+  --color-secondary-container: #fea272;
+  --color-tertiary: #3d2904;
+  --color-tertiary-container: #563f18;
+  --color-background: #fcf9f4;
+  --color-surface: #fcf9f4;
+  --color-surface-container: #f0ede9;
+  --color-surface-container-low: #f6f3ee;
+  --color-surface-container-high: #ebe8e3;
+  --color-on-surface: #1c1c19;
+  --color-on-surface-variant: #514440;
+  --color-outline: #83746f;
+  --color-outline-variant: #d5c3bd;
+}
+
+@layer base {
+  body {
+    @apply font-body bg-background text-on-surface antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass-nav {
+  @apply bg-background/80 backdrop-blur-xl;
+}
+
+.btn-primary {
+  @apply bg-primary text-white font-bold rounded-full transition-all active:scale-95 hover:opacity-90;
+}
+
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(252,249,244,0) 0%, rgba(252,249,244,1) 90%);
+}

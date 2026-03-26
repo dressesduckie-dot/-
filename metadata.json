@@ -1,0 +1,7 @@
+{
+  "name": "Khleberev Bakery",
+  "description": "Artisanal private bakery offering fresh bread, pastries, and custom cakes with traditional recipes.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
